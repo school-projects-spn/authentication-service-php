@@ -33,7 +33,7 @@ if ($method === 'POST' && $path === '/login') {
             'role' => $input['username']
         ];
 
-        $jwt = JWT::encode($payload, $_ENV['JWT_SECRET'], 'HS256');
+        $jwt = JWT::encode($payload, '3N4In35mLc3U/0xgTjahEdcPbvbfuQg/NCEX7tSZu7P6MTs6VbMqPc7hxEvL59Mq', 'HS256');
 
         echo json_encode(['success' => true, 'token' => $jwt, 'role' => $input['username']]);
     } else {
