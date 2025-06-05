@@ -21,7 +21,6 @@ $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 if ($method === 'POST' && $path === '/login') {
     $input = json_decode(file_get_contents('php://input'), true);
 
-    // Simple authentication logic
     if (($input['username'] === 'student' && $input['password'] === 'student123') ||
         ($input['username'] === 'teacher' && $input['password'] === 'teacher123')) {
 
